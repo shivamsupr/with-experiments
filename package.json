@@ -37,8 +37,8 @@
   ],
   "babel": {
     "presets": [
-        "env",
-        "react"
+      "env",
+      "react"
     ]
   }
 }

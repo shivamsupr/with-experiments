@@ -6,10 +6,14 @@ export const experiments = (experimentConfig, userExperiments) => {
   const userExperimentBuckets = {};
 
   for (const userExperimentName of Object.keys(userExperiments)) {
+
     const experiment = userExperiments[userExperimentName];
     const experimentNameList = experimentMap[userExperimentName] || [];
+
     for (const experimentName of experimentNameList) {
+
       if (experimentName in experimentList) {
+
         const { status, buckets } = experimentList[experimentName] || {};
         const { bucket } = experiment || {};
 
