@@ -28,7 +28,12 @@ describe('experiments', () => {
       }
     );
 
-    expect(result.SEND_INTEREST_TEXT.bucket).toEqual('A');
+    expect(result).toEqual({
+      SEND_INTEREST_TEXT: {
+        bucket: 'A',
+        status: true,
+      }
+    });
   });
 
 
@@ -58,7 +63,12 @@ describe('experiments', () => {
       }
     );
 
-    expect(result.SEND_INTEREST_TEXT.bucket).toEqual('A');
+    expect(result).toEqual({
+      SEND_INTEREST_TEXT: {
+        bucket: 'A',
+        status: true,
+      }
+    });
   });
 
 
@@ -87,6 +97,40 @@ describe('experiments', () => {
       }
     );
 
-    expect(result.SEND_INTEREST_TEXT.bucket).toEqual('C');
+    expect(result).toEqual({
+      SEND_INTEREST_TEXT: {
+        bucket: 'C',
+        status: true,
+      }
+    });
+  });
+
+
+  it('should return empty for a C bucket user with experiment status false', () => {
+    
+    const result = experiments(
+      {
+        experiments: {
+          someRandomExperiment: [ 'SEND_INTEREST_TEXT' ],
+        },
+        experimentList: {
+          SEND_INTEREST_TEXT: {
+            status: false,
+            buckets: {
+              A: 'A',
+              B: 'A',
+              C: 'C',
+            },
+          },
+        },
+      },
+      {
+        someRandomExperiment: {
+          bucket: 'C',
+        }
+      }
+    );
+
+    expect(result).toEqual({});
   });
 });
