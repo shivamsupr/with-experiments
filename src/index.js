@@ -34,7 +34,9 @@ export const experiments = (experimentConfig, userExperiments) => {
 const withExperiment = (experimentName, Components, fallbackBucket) => props => {
   const { experiment } = props || {};
   const { bucket } = experiment[experimentName] || {};
+
   const Component = Components[bucket] || Components[fallbackBucket];
+
   return <Component {...props} />;
 };
 
