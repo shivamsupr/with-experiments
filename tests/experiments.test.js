@@ -36,10 +36,8 @@ describe('experiments', () => {
     });
   });
 
-
-
   it('should return with A bucket for a B bucket user', () => {
-    
+
     const result = experiments(
       {
         experiments: {
@@ -70,7 +68,6 @@ describe('experiments', () => {
       }
     });
   });
-
 
   it('should return with C bucket for a C bucket user', () => {
     
@@ -104,7 +101,6 @@ describe('experiments', () => {
       }
     });
   });
-
 
   it('should return empty for a C bucket user with experiment status false', () => {
     
