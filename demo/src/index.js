@@ -1,15 +1,21 @@
-import React, {Component} from 'react'
-import {render} from 'react-dom'
+import React, {Component} from 'react';
+import {render} from 'react-dom';
 
-import Example from '../../src'
+import MyButton from './MyButton';
 
-class Demo extends Component {
-  render() {
-    return <div>
-      <h1>with-experiments Demo</h1>
-      <Example/>
-    </div>
-  }
-}
+const Demo = () => (
+  <div>
+    <MyButton experiment={{
+      MY_EXPERIMENT: {
+        bucket: 'A',
+      },
+    }} />
+    <MyButton experiment={{
+      MY_EXPERIMENT: {
+        bucket: 'B',
+      },
+    }} />
+  </div>
+);
 
-render(<Demo/>, document.querySelector('#demo'))
+render(<Demo/>, document.querySelector('#demo'));
