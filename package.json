@@ -31,8 +31,13 @@
   "author": "Shivam Rastogi",
   "homepage": "",
   "license": "MIT",
-  "repository": "",
+  "repository": "https://github.com/shivamsupr/with-experiments",
   "keywords": [
+    "ab",
+    "experiments",
+    "bucket",
+    "react",
+    "hoc",
     "react-component"
   ],
   "babel": {
