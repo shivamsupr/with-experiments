@@ -1,5 +1,5 @@
 {
-  "name": "with-experiments",
+  "name": "@shaaditech/with-experiments",
   "version": "0.0.0",
   "description": "with-experiments HOC for A/B experiments",
   "main": "lib/index.js",
@@ -28,7 +28,7 @@
     "react": "^16.3.2",
     "react-dom": "^16.3.2"
   },
-  "author": "",
+  "author": "Shivam Rastogi",
   "homepage": "",
   "license": "MIT",
   "repository": "",
