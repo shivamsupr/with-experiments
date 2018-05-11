@@ -1,6 +1,6 @@
 {
   "name": "@shaaditech/with-experiments",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "with-experiments HOC for A/B experiments",
   "main": "lib/index.js",
   "module": "es/index.js",
