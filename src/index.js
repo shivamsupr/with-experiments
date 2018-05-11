@@ -5,6 +5,8 @@ export const experiments = (experimentConfig, userExperiments) => {
 
   const userExperimentBuckets = {};
 
+  console.log('userExperiments', userExperiments);
+
   for (const userExperimentName of Object.keys(userExperiments)) {
 
     const experiment = userExperiments[userExperimentName];
@@ -26,6 +28,8 @@ export const experiments = (experimentConfig, userExperiments) => {
       }
     }
   }
+
+  console.log('userExperimentBuckets', userExperimentBuckets);
 
   return userExperimentBuckets;
 };
